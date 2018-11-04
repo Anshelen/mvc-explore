@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+						   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- When a controller returns excelDocument render the model with the excelpdf.ExcelDocument class -->
+    <bean id="excelDocument"  class="ru.javastudy.mvc.core.excelpdf.ExcelDocument" />
+    <bean id="excelDocumentExtra"  class="ru.javastudy.mvc.core.excelpdf.ExcelDocumentExtra" />
+
+    <!-- When a controller returns pdfDocument render the model with the excelpdf.PDFDocument class -->
+    <bean id="pdfDocument"  class="ru.javastudy.mvc.core.excelpdf.PDFDocument"/>
+    <bean id="pdfDocumentExtra"  class="ru.javastudy.mvc.core.excelpdf.PDFDocumentExtra"/>
+
+</beans>

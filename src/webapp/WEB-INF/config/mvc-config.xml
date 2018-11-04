@@ -11,6 +11,7 @@
 	   http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="ru.javastudy.mvc.core" />
+    <mvc:annotation-driven/>
 
     <!-- ViewResolver bean config for mapping strings to jsp views -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -20,9 +21,21 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
+    <!-- File Upload bean config-->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- set the maximum file size in bytes -->
+        <property name="maxUploadSize" value="10000000"/>
+    </bean>
+
+    <!--Excel and PDF xml view configuration -->
+    <bean class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="order" value="0" />
+        <property name="location" value="/WEB-INF/config/excel-pdf-config.xml"/>
+    </bean>
 
     <mvc:view-controller path="/about.html" view-name="/about/about"/>
     <mvc:view-controller path="/index.html" view-name="/index"/>
-
+    <mvc:view-controller path="/file.html" view-name="/file/file"/>
 
 </beans>
