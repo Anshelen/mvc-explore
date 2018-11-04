@@ -37,5 +37,6 @@
     <mvc:view-controller path="/about.html" view-name="/about/about"/>
     <mvc:view-controller path="/index.html" view-name="/index"/>
     <mvc:view-controller path="/file.html" view-name="/file/file"/>
+    <mvc:view-controller path="/jdbc.html" view-name="/jdbc/jdbc"/>
 
 </beans>
