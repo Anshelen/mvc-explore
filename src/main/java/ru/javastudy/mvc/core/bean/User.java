@@ -1,10 +1,35 @@
 package ru.javastudy.mvc.core.bean;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name = "USER")
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "IDUSER")
     private int idUser;
+
+    @NotEmpty
+    @Size(min = 5, max = 20)
+    @Column(name = "USERNAME")
     private String username;
+
+    @NotEmpty
+    @Size(min=5, max=20)
+    @Column(name="PASSWORD")
     private String password;
+
+    @Column(name="ENABLED")
     private boolean enabled;
 
     public int getIdUser() {
