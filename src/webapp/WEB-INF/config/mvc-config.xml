@@ -42,6 +42,7 @@
     <mvc:view-controller path="/jdbc.html" view-name="/jdbc/jdbc"/>
     <mvc:view-controller path="/email.html" view-name="/email/email"/>
     <mvc:view-controller path="/orm.html" view-name="/orm/orm"/>
+    <mvc:view-controller path="/jstl.html" view-name="/jstl/jstl"/>
 
 
 </beans>
