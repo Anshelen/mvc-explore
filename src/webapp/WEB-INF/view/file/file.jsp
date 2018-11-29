@@ -53,6 +53,12 @@
                 </div>
 
             </div>
+            <br />
+                <%--Объект из примера scope.jsp--%>
+            <c:if test="${not empty sessionScope.sessionObject}">
+                <p>Объект в области видимости session:</p>
+                <b>${sessionScope.sessionObject}</b>
+            </c:if>
             <!-- /.row -->
 
             <hr>
