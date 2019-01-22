@@ -2,8 +2,6 @@ package ru.javastudy.mvc.core.scheduling;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Calendar;
 /**
  * look application-context.xml
  * 1. simpleTrigger
@@ -17,8 +15,8 @@ public class QuartzTask {
 
     public void simpleTaskMethod() {
 //		you can log here to database with simpletrigger
-        LOGGER.info("Test Simple Quartz Time: " + Calendar.getInstance().getTime());
-        System.out.println("Test Simple Quartz Time: " + Calendar.getInstance().getTime());
+//        LOGGER.info("Test Simple Quartz Time: " + Calendar.getInstance().getTime());
+//        System.out.println("Test Simple Quartz Time: " + Calendar.getInstance().getTime());
     }
 
 }

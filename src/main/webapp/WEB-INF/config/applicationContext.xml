@@ -45,6 +45,8 @@
         </property>
     </bean>
 
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate"/>
+
     <!-- Velocity Email Template Config Bean -->
     <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
         <property name="resourceLoaderPath" value="/WEB-INF/email-templates/"/>
@@ -54,7 +56,12 @@
     <!-- JPA Persistence Context and EntityManager configuration -->
     <bean id="entityManagerFactory"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" >
-        <property name="packagesToScan" value="ru.javastudy.mvc.core.bean" />
+        <property name="packagesToScan">
+            <array>
+                <value>ru.javastudy.mvc.core.bean</value>
+                <value>ru.javastudy.mvc.core.rest.model</value>
+            </array>
+        </property>
         <property name="dataSource" ref="dataSource" />
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" >

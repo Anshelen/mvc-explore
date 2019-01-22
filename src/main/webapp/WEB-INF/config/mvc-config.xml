@@ -58,6 +58,7 @@
     <mvc:view-controller path="/security.html" view-name="/security/security"/>
     <mvc:view-controller path="/security/admin.html" view-name="/security/admin"/>
     <mvc:view-controller path="/login.html" view-name="/form/login"/>
+    <mvc:view-controller path="/rest.html" view-name="/rest/rest"/>
 
     <mvc:interceptors>
         <mvc:interceptor>
@@ -68,5 +69,14 @@
         </mvc:interceptor>
     </mvc:interceptors>
 
+
+    <mvc:annotation-driven>
+        <!--use int RestController to produce pretty json response-->
+        <mvc:message-converters>
+            <bean id="jacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="prettyPrint" value="true" />
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 
 </beans>
