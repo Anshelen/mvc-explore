@@ -5,17 +5,25 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:security= "http://www.springframework.org/schema/security"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/mvc
 	   http://www.springframework.org/schema/mvc/spring-mvc.xsd
 	   http://www.springframework.org/schema/context
-	   http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+	   http://www.springframework.org/schema/context/spring-context.xsd
+	   http://www.springframework.org/schema/tx
+	   http://www.springframework.org/schema/tx/spring-tx.xsd
+	   http://www.springframework.org/schema/task
+	   http://www.springframework.org/schema/task/spring-task.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security.xsd">
 
     <context:component-scan base-package="ru.javastudy.mvc.core" />
     <mvc:annotation-driven/>
     <tx:annotation-driven/>
     <task:annotation-driven/>
+    <security:global-method-security pre-post-annotations= "enabled" secured-annotations= "enabled" jsr250-annotations= "enabled"/>
 
     <!-- ViewResolver bean config for mapping strings to jsp views -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -47,6 +55,9 @@
     <mvc:view-controller path="/jstl.html" view-name="/jstl/jstl"/>
     <mvc:view-controller path="/scope.html" view-name="/scope/scope"/>
     <mvc:view-controller path="/cookie.html" view-name="/cookie/cookieView"/>
+    <mvc:view-controller path="/security.html" view-name="/security/security"/>
+    <mvc:view-controller path="/security/admin.html" view-name="/security/admin"/>
+    <mvc:view-controller path="/login.html" view-name="/form/login"/>
 
     <mvc:interceptors>
         <mvc:interceptor>
