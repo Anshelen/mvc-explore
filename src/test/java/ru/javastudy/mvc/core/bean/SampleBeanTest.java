@@ -8,13 +8,16 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
+import ru.javastudy.mvc.javaconfig.ApplicationConfig;
+import ru.javastudy.mvc.javaconfig.MVCConfig;
 
 /**
  * Created for JavaStudy.ru on 04.03.2016.
  */
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:mvc-config.xml", "classpath:applicationContext.xml"})
+//@ContextConfiguration(locations = {"classpath:mvc-config.xml", "classpath:applicationContext.xml"})
+@ContextConfiguration(classes = {MVCConfig.class, ApplicationConfig.class})
 public class SampleBeanTest {
 
     @Autowired
