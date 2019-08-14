@@ -1,1 +1,1 @@
-Test MVC and angularjs project
+Spring MVC draft project
