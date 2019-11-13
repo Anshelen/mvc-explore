@@ -17,7 +17,7 @@
         <junit.version>4.12</junit.version>
         <slf4j.version>1.7.25</slf4j.version>
         <hibernate.version>5.0.1.Final</hibernate.version>
-        <spring-framework.data.version>1.9.1.RELEASE</spring-framework.data.version>
+        <spring-framework.data.version>1.11.23.RELEASE</spring-framework.data.version>
         <logback.version>1.0.13</logback.version>
         <!--<spring-security.version>4.0.4.RELEASE</spring-security.version>-->
         <spring-security.version>4.0.4.RELEASE</spring-security.version>
