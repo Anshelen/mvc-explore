@@ -22,7 +22,7 @@
         <!--<spring-security.version>4.0.4.RELEASE</spring-security.version>-->
         <spring-security.version>4.0.4.RELEASE</spring-security.version>
         <quartz.scheduling.version>2.2.1</quartz.scheduling.version>
-        <jackson.databind-version>2.9.10.1</jackson.databind-version>
+        <jackson.databind-version>2.9.10.4</jackson.databind-version>
     </properties>
 
     <dependencyManagement>
