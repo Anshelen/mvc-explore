@@ -18,7 +18,7 @@
         <slf4j.version>1.7.25</slf4j.version>
         <hibernate.version>5.0.1.Final</hibernate.version>
         <spring-framework.data.version>1.11.23.RELEASE</spring-framework.data.version>
-        <logback.version>1.0.13</logback.version>
+        <logback.version>1.2.0</logback.version>
         <!--<spring-security.version>4.0.4.RELEASE</spring-security.version>-->
         <spring-security.version>4.0.4.RELEASE</spring-security.version>
         <quartz.scheduling.version>2.2.1</quartz.scheduling.version>
